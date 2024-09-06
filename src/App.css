@@ -100,3 +100,37 @@ h3 {
 .card button:hover {
     background-color: #0056b3;
 }
+
+.Products{
+    margin: auto;
+    margin-top: 100px;
+    border: 3px solid black;
+    width: 300px;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    
+}
+.Products h2 {
+    text-align: center;
+}
+.Products img{
+    margin: auto;
+}
+.Products div{
+    display: flex;
+}
+.Products div button{
+    background-color: #0056b3;
+    border-radius: 7px;
+    width: 30px;
+    color: white;
+    margin: auto;
+    
+}
+.AddToCard{
+    background-color: red;
+}
+.Products p{
+    text-align: center;
+}

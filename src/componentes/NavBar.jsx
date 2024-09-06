@@ -8,7 +8,6 @@ export const NavBar = ({ carrito }) => {
             <Link to="/Toyota">Toyota</Link>
             <Link to="/Peugeot">Peugeot</Link>
             <Link to="/Volkswagen">Volkswagen</Link>
-            {/* Pasamos el carrito a CardWidget */}
             <CardWidget carrito={carrito} />
         </nav>
     );

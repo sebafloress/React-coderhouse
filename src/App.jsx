@@ -10,13 +10,13 @@ import { Error } from "./pages/Error";
 import "./App.css";
 
 function App() {
-    const [carrito, setCarrito] = useState([]); // Estado global del carrito
+    const [carrito, setCarrito] = useState([]); 
 
-    // Función para agregar productos al carrito
+    
     const handleAddToCart = (producto, cantidad) => {
         const itemEnCarrito = carrito.find(item => item.id === producto.id);
         if (itemEnCarrito) {
-            // Si ya está en el carrito, actualizamos la cantidad
+
             setCarrito(
                 carrito.map(item =>
                     item.id === producto.id
@@ -25,7 +25,7 @@ function App() {
                 )
             );
         } else {
-            // Si no está, lo agregamos
+        
             setCarrito([...carrito, { ...producto, cantidad }]);
         }
     };
@@ -35,7 +35,7 @@ function App() {
             <header>
                 <p>Carshop</p>
             </header>
-            {/* Pasamos el carrito a NavBar para que lo muestre */}
+            
             <NavBar carrito={carrito} />
             <Routes>
                 <Route path="/Home" element={<Home />} />

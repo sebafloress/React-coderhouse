@@ -24,14 +24,14 @@ export const ProductDetail = ({ onAddToCart }) => {
         return <h2>Producto no encontrado</h2>;
     }
 
-    // Funciones para incrementar y decrementar cantidad
+    // Funciones para sumar y restar cantidad
     const incrementarCantidad = () => setCantidad(cantidad + 1);
     const decrementarCantidad = () => {
         if (cantidad > 1) setCantidad(cantidad - 1);
     };
 
     return (
-        <div>
+        <div className="Products">
             <h2>{producto.nombre}</h2>
             <img src={producto.imagen} alt={`Imagen del ${producto.nombre}`} />
             <p>Precio: ${producto.precio}</p>
@@ -40,7 +40,7 @@ export const ProductDetail = ({ onAddToCart }) => {
                 <span>{cantidad}</span>
                 <button onClick={incrementarCantidad}>+</button>
             </div>
-            <button onClick={() => onAddToCart(producto, cantidad)}>Agregar al carrito</button>
+            <button className="AddtoCart" onClick={() => onAddToCart(producto, cantidad)}>Agregar al carrito</button>
         </div>
     );
 };

@@ -10,9 +10,7 @@ const productos = [
     { id: 7, nombre: "Producto 7", imagen: "https://via.placeholder.com/250" },
     { id: 8, nombre: "Producto 8", imagen: "https://via.placeholder.com/250" },
     { id: 9, nombre: "Producto 9", imagen: "https://via.placeholder.com/250" },
-    { id: 10, nombre: "Producto 10", imagen: "https://via.placeholder.com/250" },
-    { id: 11, nombre: "Producto 11", imagen: "https://via.placeholder.com/250" },
-    { id: 12, nombre: "Producto 12", imagen: "https://via.placeholder.com/250" }
+    
 ];
 
 export const Home = () => {
