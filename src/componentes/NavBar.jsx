@@ -1,5 +1,6 @@
+// src/componentes/NavBar.jsx
 import { Link } from "react-router-dom";
-import { CardWidget } from "./CartWidget";
+import { CartWidget } from "./CartWidget";
 
 export const NavBar = ({ carrito }) => {
     return (
@@ -8,7 +9,7 @@ export const NavBar = ({ carrito }) => {
             <Link to="/Toyota">Toyota</Link>
             <Link to="/Peugeot">Peugeot</Link>
             <Link to="/Volkswagen">Volkswagen</Link>
-            <CardWidget carrito={carrito} />
+            <CartWidget carrito={carrito} /> 
         </nav>
     );
 };

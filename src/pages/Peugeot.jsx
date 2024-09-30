@@ -1,17 +1,23 @@
-import { ItemListContainer } from '../componentes/ItemListContainer';
-
-const productosPeugeot = [
-    { id: 1, nombre: "Producto 1", imagen: "https://via.placeholder.com/250" },
-    { id: 2, nombre: "Producto 2", imagen: "https://via.placeholder.com/250" },
-    { id: 3, nombre: "Producto 3", imagen: "https://via.placeholder.com/250" }
-];
+// src/pages/Peugeot.jsx
+import { useEffect, useState } from "react";
+import { collection, query, where, getDocs, getFirestore } from "firebase/firestore";
+import ItemList from "../componentes/ItemList";
 
 export const Peugeot = () => {
+    const [productosPeugeot, setProductosPeugeot] = useState([]);
+
+    useEffect(() => {
+        const db = getFirestore();
+        const q = query(collection(db, "products"), where("marca", "==", "Peugeot"));
+        getDocs(q).then((snapshot) => {
+            setProductosPeugeot(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+        });
+    }, []);
+
     return (
         <div>
             <h2>Peugeot</h2>
-            <ItemListContainer mensaje={"Productos Peugeot"} productos={productosPeugeot} basePath="/Peugeot" />
+            <ItemList items={productosPeugeot} />
         </div>
     );
 };
-

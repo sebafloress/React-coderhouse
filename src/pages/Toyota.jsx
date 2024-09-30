@@ -1,16 +1,23 @@
-import { ItemListContainer } from '../componentes/ItemListContainer';
-const productosToyota = [
-    { id: 7, nombre: "Producto 7", imagen: "https://via.placeholder.com/250" },
-    { id: 8, nombre: "Producto 8", imagen: "https://via.placeholder.com/250" },
-    { id: 9, nombre: "Producto 9", imagen: "https://via.placeholder.com/250" }
-];
+// src/pages/Toyota.jsx
+import { useEffect, useState } from "react";
+import { collection, query, where, getDocs, getFirestore } from "firebase/firestore";
+import ItemList from "../componentes/ItemList";
 
 export const Toyota = () => {
+    const [productosToyota, setProductosToyota] = useState([]);
+
+    useEffect(() => {
+        const db = getFirestore();
+        const q = query(collection(db, "products"), where("marca", "==", "toyota"));
+        getDocs(q).then((snapshot) => {
+            setProductosToyota(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+        });
+    }, []);
+
     return (
         <div>
             <h2>Toyota</h2>
-            <ItemListContainer mensaje={"Productos Toyota"} productos={productosToyota} basePath="/Toyota" />
+            <ItemList items={productosToyota} />
         </div>
     );
 };
-

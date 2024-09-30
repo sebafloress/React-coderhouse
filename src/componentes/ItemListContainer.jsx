@@ -1,20 +1,27 @@
 import { Link } from "react-router-dom";
-
-export const ItemListContainer = ({ mensaje, productos, basePath }) => {
-    return (
-        <div>
-            <h3>{mensaje}</h3>
-            <div className="container">
-                {productos.map(producto => (
-                    <div key={producto.id} className="card">
-                        <h2>{producto.nombre}</h2>
-                        <img src={producto.imagen} alt={`Imagen del ${producto.nombre}`} />
-                        <Link to={`${basePath}/${producto.id}`}>
-                            <button>Detalles del producto</button>
-                        </Link>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
-};
+import { getDocs, collection, getFirestore } from "firebase/firestore";
+import React, {useEffect, useState} from "react";
+import { useParams } from "react-router-dom";
+import ItemList from "./ItemList";
+const ItemListContainer = () =>{
+    const [products, setProducts] = useState ([])
+    const {categoryId} = useParams ()
+    useEffect (() => {
+        const db = getFirestore ()
+        const itemCollection = collection (db, "products")
+        getDocs (itemCollection)
+        .then ((snapshot) => {
+            setProducts(
+                snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()}))
+            )
+            
+        })
+},
+[])
+return(
+    <div>
+        <ItemList items={products}/>
+    </div>
+)
+}
+export default ItemListContainer

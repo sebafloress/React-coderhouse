@@ -1,17 +1,23 @@
-import { ItemListContainer } from '../componentes/ItemListContainer';
-
-const productosVolkswagen = [
-    { id: 4, nombre: "Producto 4", imagen: "https://via.placeholder.com/250" },
-    { id: 5, nombre: "Producto 5", imagen: "https://via.placeholder.com/250" },
-    { id: 6, nombre: "Producto 6", imagen: "https://via.placeholder.com/250" }
-];
+// src/pages/Volkswagen.jsx
+import { useEffect, useState } from "react";
+import { collection, query, where, getDocs, getFirestore } from "firebase/firestore";
+import ItemList from "../componentes/ItemList";
 
 export const Volkswagen = () => {
+    const [productosVolkswagen, setProductosVolkswagen] = useState([]);
+
+    useEffect(() => {
+        const db = getFirestore();
+        const q = query(collection(db, "products"), where("marca", "==", "volkswagen"));
+        getDocs(q).then((snapshot) => {
+            setProductosVolkswagen(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+        });
+    }, []);
+
     return (
         <div>
             <h2>Volkswagen</h2>
-            <ItemListContainer mensaje={"Productos Volkswagen"} productos={productosVolkswagen} basePath="/Volkswagen" />
+            <ItemList items={productosVolkswagen} />
         </div>
     );
 };
-

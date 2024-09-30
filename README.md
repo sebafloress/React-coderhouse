@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Carshop - Tienda de Autos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
 
-## Available Scripts
+Carshop es una aplicación web de comercio electrónico enfocada en la venta de automóviles de distintas marcas, incluyendo **Peugeot**, **Volkswagen** y **Toyota**. Los usuarios pueden navegar por las distintas marcas, ver una selección de autos disponibles y agregar productos al carrito para realizar una compra simulada.
 
-In the project directory, you can run:
+### Características principales:
+- **Filtrado por marca**: Los usuarios pueden seleccionar entre diferentes marcas (Peugeot, Volkswagen, Toyota) y ver solo los productos correspondientes a esa marca.
+- **Detalles de producto**: Al hacer clic en el botón "Ver más detalles", los usuarios pueden ver información detallada del producto, como nombre, imagen y precio.
+- **Carrito de compras**: Los usuarios pueden agregar productos al carrito, ajustar la cantidad de productos, y eliminar elementos antes de finalizar la compra.
+- **Finalización de compra**: Los usuarios pueden finalizar su compra y vaciar el carrito al hacerlo.
 
-### `npm start`
+## Tecnologías utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. **Lenguajes de programación:**
+- **JavaScript**: Lenguaje principal utilizado para la lógica de la aplicación.
+- **CSS**: Usado para el estilo y diseño de la interfaz de usuario.
+- **HTML**: Generado a través de los componentes React.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. **Frameworks y librerías:**
+- **React.js**: Librería de JavaScript para la construcción de interfaces de usuario basadas en componentes.
+- **React Router**: Utilizado para la navegación entre páginas y rutas dinámicas.
+- **Firebase Firestore**: Base de datos NoSQL en la nube utilizada para almacenar los productos de la tienda.
+- **Firebase Hosting**: Para alojar la aplicación web.
 
-### `npm test`
+### 3. **Firebase**:
+La aplicación utiliza **Firebase Firestore** para almacenar y obtener los productos del catálogo. Cada producto tiene un campo para **marca**, **nombre**, **precio**, **imagen**, y un **ID** único que es usado en la navegación dinámica.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 4. **Estilo**:
+- **CSS personalizado**: La aplicación tiene un diseño sencillo pero efectivo, con un enfoque en la presentación de productos, tarjetas de producto, y un carrito de compras interactivo.
 
-### `npm run build`
+## Instalación
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clona el repositorio de la aplicación.
+    ```bash
+    git clone https://github.com/usuario/carshop.git
+    cd carshop
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Instala las dependencias necesarias.
+    ```bash
+    npm install
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Configura Firebase.
+    - Crea un proyecto en [Firebase](https://firebase.google.com/).
+    - Habilita Firestore y agrega los detalles de configuración de Firebase en un archivo `.env` o en el archivo `firebaseConfig` dentro del código.
+    
+4. Inicia la aplicación localmente.
+    ```bash
+    npm start
+    ```
 
-### `npm run eject`
+5. Accede a la aplicación en tu navegador en `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Estructura del proyecto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
