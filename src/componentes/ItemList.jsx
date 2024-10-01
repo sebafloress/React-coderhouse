@@ -1,4 +1,4 @@
-// src/componentes/ItemList.jsx
+
 import React from "react";
 import Item from "./item";
 

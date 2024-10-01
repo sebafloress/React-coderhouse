@@ -1,4 +1,4 @@
-// src/pages/Toyota.jsx
+
 import { useEffect, useState } from "react";
 import { collection, query, where, getDocs, getFirestore } from "firebase/firestore";
 import ItemList from "../componentes/ItemList";

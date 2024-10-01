@@ -2,56 +2,37 @@
 
 ## Descripción
 
-Carshop es una aplicación web de comercio electrónico enfocada en la venta de automóviles de distintas marcas, incluyendo **Peugeot**, **Volkswagen** y **Toyota**. Los usuarios pueden navegar por las distintas marcas, ver una selección de autos disponibles y agregar productos al carrito para realizar una compra simulada.
+Carshop es una aplicación web de comercio electrónico enfocada en la venta de automóviles de distintas marcas, incluyendo **Peugeot**, **Volkswagen**, y **Toyota**. Los usuarios pueden explorar diferentes categorías de autos, ver los detalles de cada producto y agregar productos al carrito para simular una compra.
 
-### Características principales:
-- **Filtrado por marca**: Los usuarios pueden seleccionar entre diferentes marcas (Peugeot, Volkswagen, Toyota) y ver solo los productos correspondientes a esa marca.
-- **Detalles de producto**: Al hacer clic en el botón "Ver más detalles", los usuarios pueden ver información detallada del producto, como nombre, imagen y precio.
-- **Carrito de compras**: Los usuarios pueden agregar productos al carrito, ajustar la cantidad de productos, y eliminar elementos antes de finalizar la compra.
-- **Finalización de compra**: Los usuarios pueden finalizar su compra y vaciar el carrito al hacerlo.
+Puedes acceder a la aplicación desplegada en Netlify a través del siguiente enlace:
+
+🔗 [Carshop en Netlify](https://comfy-alfajores-05ae94.netlify.app)
+
+## Características
+
+- **Navegación por marcas**: Los usuarios pueden seleccionar diferentes marcas (Peugeot, Volkswagen, Toyota) para ver solo los productos correspondientes a cada una.
+- **Detalle del producto**: Cada producto tiene una página de detalles donde se muestra su imagen, nombre, precio, y un botón para agregarlo al carrito.
+- **Carrito de compras**: Los usuarios pueden agregar productos al carrito, ajustar las cantidades, y eliminar productos antes de completar la compra.
+- **Creación de órdenes**: Los usuarios pueden proporcionar su nombre y correo electrónico y crear una orden que se guarda en Firebase Firestore, mostrando el ID de la orden en pantalla.
+- **Firebase Firestore**: Los productos y las órdenes se almacenan y se gestionan utilizando Firebase Firestore.
 
 ## Tecnologías utilizadas
 
-### 1. **Lenguajes de programación:**
-- **JavaScript**: Lenguaje principal utilizado para la lógica de la aplicación.
-- **CSS**: Usado para el estilo y diseño de la interfaz de usuario.
-- **HTML**: Generado a través de los componentes React.
+### 1. **Lenguajes y herramientas**:
+- **JavaScript (React.js)**: Usado para la lógica del frontend y la estructura de la aplicación basada en componentes.
+- **CSS**: Utilizado para el diseño y estilo de la interfaz de usuario.
+- **HTML**: Generado a través de los componentes de React.
 
-### 2. **Frameworks y librerías:**
-- **React.js**: Librería de JavaScript para la construcción de interfaces de usuario basadas en componentes.
-- **React Router**: Utilizado para la navegación entre páginas y rutas dinámicas.
-- **Firebase Firestore**: Base de datos NoSQL en la nube utilizada para almacenar los productos de la tienda.
-- **Firebase Hosting**: Para alojar la aplicación web.
+### 2. **Frameworks y librerías**:
+- **React.js**: Librería principal utilizada para la construcción de la interfaz de usuario.
+- **React Router**: Utilizado para la navegación entre las diferentes rutas de la aplicación.
+- **Firebase Firestore**: Base de datos NoSQL que almacena los productos y órdenes de la tienda.
+- **Firebase Hosting**: Usado para el despliegue y hospedaje de la base de datos.
+- **Netlify**: Plataforma utilizada para desplegar la aplicación en la web.
 
-### 3. **Firebase**:
-La aplicación utiliza **Firebase Firestore** para almacenar y obtener los productos del catálogo. Cada producto tiene un campo para **marca**, **nombre**, **precio**, **imagen**, y un **ID** único que es usado en la navegación dinámica.
+## Instalación y configuración
 
-### 4. **Estilo**:
-- **CSS personalizado**: La aplicación tiene un diseño sencillo pero efectivo, con un enfoque en la presentación de productos, tarjetas de producto, y un carrito de compras interactivo.
-
-## Instalación
-
-1. Clona el repositorio de la aplicación.
-    ```bash
-    git clone https://github.com/usuario/carshop.git
-    cd carshop
-    ```
-
-2. Instala las dependencias necesarias.
-    ```bash
-    npm install
-    ```
-
-3. Configura Firebase.
-    - Crea un proyecto en [Firebase](https://firebase.google.com/).
-    - Habilita Firestore y agrega los detalles de configuración de Firebase en un archivo `.env` o en el archivo `firebaseConfig` dentro del código.
-    
-4. Inicia la aplicación localmente.
-    ```bash
-    npm start
-    ```
-
-5. Accede a la aplicación en tu navegador en `http://localhost:3000`.
-
-## Estructura del proyecto
-
+### 1. Clona este repositorio:
+```bash
+git clone https://github.com/usuario/carshop.git
+cd carshop

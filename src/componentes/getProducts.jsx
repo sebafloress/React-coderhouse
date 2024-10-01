@@ -1,8 +1,8 @@
-// src/firebase/getProducts.js
+
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../index";
 
-// Función para obtener productos desde Firestore
+
 export const getProducts = async () => {
     try {
         const productsCollection = collection(db, "products");
@@ -22,7 +22,7 @@ export const getProducts = async () => {
                 id: doc.id,
                 ...data
             };
-        }).filter(producto => producto !== null); // Filtrar documentos inválidos
+        }).filter(producto => producto !== null); 
 
         console.log("Productos obtenidos:", productsList);
         return productsList;

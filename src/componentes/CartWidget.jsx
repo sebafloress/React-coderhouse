@@ -1,4 +1,4 @@
-// src/componentes/CartWidget.jsx
+
 import { Link } from "react-router-dom";
 
 export const CartWidget = ({ carrito }) => {
@@ -7,7 +7,7 @@ export const CartWidget = ({ carrito }) => {
 
     return (
         <div className="cart-widget">
-            <Link to="/cart"> {/* Envuelve la imagen y el total en un Link para redirigir al carrito */}
+            <Link to="/cart"> {}
                 <img className="h-10" src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Carrito" />
                 <span>{totalProductos}</span>
             </Link>

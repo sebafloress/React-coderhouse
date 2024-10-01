@@ -1,12 +1,12 @@
-// src/componentes/ProductDetail.jsx
+
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 export const ProductDetail = ({ onAddToCart }) => {
-    const { id } = useParams();  // Obtener ID del producto desde la URL
+    const { id } = useParams();
     const [producto, setProducto] = useState(null);
-    const [cantidad, setCantidad] = useState(1);  // Estado para la cantidad
+    const [cantidad, setCantidad] = useState(1);
 
     useEffect(() => {
         const db = getFirestore();
@@ -24,7 +24,6 @@ export const ProductDetail = ({ onAddToCart }) => {
         return <h2>Producto no encontrado</h2>;
     }
 
-    // Funciones para incrementar o disminuir la cantidad
     const incrementarCantidad = () => setCantidad(cantidad + 1);
     const decrementarCantidad = () => {
         if (cantidad > 1) setCantidad(cantidad - 1);
@@ -32,8 +31,9 @@ export const ProductDetail = ({ onAddToCart }) => {
 
     return (
         <div className="product-detail">
-            <h2>{producto.nombre}</h2>
-            <img src={producto.img} alt={`Imagen del ${producto.nombre}`} />
+            <h2>{producto.marca}</h2>
+            <img src={producto.img} alt={`Imagen del ${producto.marca}`} />
+            <p>{producto.modelo}</p>
             <p>Precio: USD${producto.precio}</p>
             <div className="quantity-controls">
                 <button onClick={decrementarCantidad}>-</button>
