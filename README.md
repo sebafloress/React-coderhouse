@@ -6,7 +6,7 @@ Carshop es una aplicación web de comercio electrónico enfocada en la venta de 
 
 Puedes acceder a la aplicación desplegada en Netlify a través del siguiente enlace:
 
-🔗 [Carshop en Netlify](https://carshopcoder.netlify.app/Home)
+🔗 [Carshop en Netlify](https://carshopcoder.netlify.app/Home) 
 
 ## Características
 
@@ -21,7 +21,7 @@ Puedes acceder a la aplicación desplegada en Netlify a través del siguiente en
 ### 1. **Lenguajes y herramientas**:
 - **JavaScript (React.js)**: Usado para la lógica del frontend y la estructura de la aplicación basada en componentes.
 - **CSS**: Utilizado para el diseño y estilo de la interfaz de usuario.
-- **HTML**: Generado a través de los componentes de React.
+- **HTML**: Generado a través de los componentes de React
 
 ### 2. **Frameworks y librerías**:
 - **React.js**: Librería principal utilizada para la construcción de la interfaz de usuario.
