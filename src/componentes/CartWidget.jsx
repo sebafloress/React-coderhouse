@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 export const CartWidget = ({ carrito }) => {
-    // Calcular la cantidad total de productos en el carrito
+    
     const totalProductos = carrito.reduce((total, item) => total + item.cantidad, 0);
 
     return (

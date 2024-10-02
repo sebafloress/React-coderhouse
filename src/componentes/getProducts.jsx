@@ -10,13 +10,13 @@ export const getProducts = async () => {
         const productsSnapshot = await getDocs(productsCollection);
         console.log("snapshot.docs")
         
-        // Comprobar si los documentos tienen los campos esperados
+        
         const productsList = productsSnapshot.docs.map(doc => {
             const data = doc.data();
-            // Validar que todos los campos existan
+           
             if (!data.marca || !data.modelo || !data.precio || !data.img) {
                 console.warn(`Documento faltante de datos: ${doc.id}`, data);
-                return null; // Ignorar documentos con datos faltantes
+                return null; 
             }
             return {
                 id: doc.id,

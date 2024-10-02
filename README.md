@@ -6,7 +6,7 @@ Carshop es una aplicación web de comercio electrónico enfocada en la venta de 
 
 Puedes acceder a la aplicación desplegada en Netlify a través del siguiente enlace:
 
-🔗 [Carshop en Netlify](https://comfy-alfajores-05ae94.netlify.app)
+🔗 [Carshop en Netlify](https://carshopcoder.netlify.app/Home)
 
 ## Características
 
